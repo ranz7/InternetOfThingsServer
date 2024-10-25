@@ -16,7 +16,7 @@ import {
 // Register the components you need
 ChartJS.register(LineElement, PointElement, LinearScale, CategoryScale, Tooltip, Legend);
 
-const MQTT_WS_URI = process.env.NEXT_PUBLIC_MQTT_WS_URI || 'ws://34.55.119.226:8080/mqtt';
+// const MQTT_WS_URI = process.env.NEXT_PUBLIC_MQTT_WS_URI || 'ws://34.55.119.226:8080/mqtt';
 const API_URI = process.env.NEXT_PUBLIC_API_URI || 'http://34.55.119.226:3001';
 
 const TemperatureChart = () => {
