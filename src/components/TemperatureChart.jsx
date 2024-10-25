@@ -20,7 +20,7 @@ ChartJS.register(LineElement, PointElement, LinearScale, CategoryScale, Tooltip,
 const API_URI = process.env.NEXT_PUBLIC_API_URI || 'http://34.55.119.226:3001';
 
 const TemperatureChart = () => {
-  const [currentTemp, setCurrentTemp] = useState<number | null>(null);
+  const [currentTemp, setCurrentTemp] = useState(null);
   const [historicalData, setHistoricalData] = useState([]);
 
   const fetchHistoricalData = async () => {
