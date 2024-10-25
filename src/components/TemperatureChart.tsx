@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
-import mqtt from 'mqtt';
+// import mqtt from 'mqtt';
 import {
   Chart as ChartJS,
   LineElement,
