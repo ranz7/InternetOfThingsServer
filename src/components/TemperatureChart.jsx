@@ -13,7 +13,6 @@ import {
   Legend,
 } from 'chart.js';
 
-// Register the components you need
 ChartJS.register(LineElement, PointElement, LinearScale, CategoryScale, Tooltip, Legend);
 
 // const MQTT_WS_URI = process.env.NEXT_PUBLIC_MQTT_WS_URI || 'ws://34.55.119.226:8080/mqtt';
@@ -40,24 +39,6 @@ const TemperatureChart = () => {
     const interval = setInterval(fetchHistoricalData, 5000);
     return () => clearInterval(interval);
   }, []);
-
-  // useEffect(() => {
-  //   const mqttClient = mqtt.connect(MQTT_WS_URI);
-
-  //   mqttClient.on("connect", () => {
-  //     mqttClient.subscribe("sensors/temperature");
-  //   });
-
-  //   mqttClient.on("message", (topic, message) => {
-  //     const data = JSON.parse(message.toString());
-  //     setCurrentTemp(data.temperature);
-  //     setHistoricalData(prev => [...prev, data]);
-  //   });
-
-  //   return () => {
-  //     mqttClient.end();
-  //   };
-  // }, []);
 
   // Create reversed chart data
   const chartData = {
